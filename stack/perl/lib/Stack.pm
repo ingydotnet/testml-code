@@ -3,6 +3,7 @@ use 5.008008;
 use Moose;
 
 has 'stack' => (
+    is => 'ro',
     isa => 'ArrayRef',
 );
 
@@ -18,8 +19,7 @@ sub push {
     die "Stack push method requires 1 argument. You passed $num."
         unless $num == 1;
     my $elem = shift;
-    push @{$self->stack, $elem}, $elem;
-    return $elem;
+    push @{$self->stack}, $elem;
 }
 
 sub pop {

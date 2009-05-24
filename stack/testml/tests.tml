@@ -1,15 +1,22 @@
 %TestML: 1.0
 
-empty.new_stack().pop_stack()
-    .Catch() == Str('True');
+%Plan: 3
 
-=== pop empty stack makes error
+empty.new_stack().pop_stack().Catch()
+    == Str('Stack has no element to pop.');
+
+init.List().new_stack()
+    .push_stack('Hai!')
+    .pop_stack() == Str('Hai!');
+
+init.List().new_stack()
+    .push_stack('yay')
+    .head_stack() == Str('yay');
+
+=== pop() empty stack makes error
 --- empty
 
-=== Test for push
+=== Test for stack operations
 --- init
 foo
 bar
---- elem: baz
---- result: foo:bar:baz
-

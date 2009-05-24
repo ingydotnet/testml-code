@@ -1,1 +1,5 @@
-This will be the Perl 5 implementation of Stack.
+This is the Perl 5 implementation of Stack.
+
+You should make sure to have the latest from
+http://github.com/ingydotnet/testml-pm/tree/master
+installed before running this.

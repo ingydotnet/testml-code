@@ -2,16 +2,16 @@
 
 %Plan: 3
 
-empty.new_stack().pop_stack().Catch()
-    == Str('Stack has no element to pop.');
+$empty.new_stack().pop_stack().Catch()
+    == 'Stack has no element to pop.';
 
-init.List().new_stack()
+$init.List().new_stack()
     .push_stack('Hai!')
-    .pop_stack() == Str('Hai!');
+    .pop_stack() == 'Hai!';
 
-init.List().new_stack()
+$init.List().new_stack()
     .push_stack('yay')
-    .head_stack() == Str('yay');
+    .head_stack() == 'yay';
 
 === pop() empty stack makes error
 --- empty

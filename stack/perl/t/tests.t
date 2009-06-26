@@ -1,3 +1,3 @@
 use TestML -run,
     -document => 't/testml/tests.tml',
-    -bridge => 'StackTestMLBridge';
+    -bridge => 't::Bridge';
